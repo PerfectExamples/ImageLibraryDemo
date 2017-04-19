@@ -25,13 +25,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 		images({
 			imgs in
+
 			for s in imgs {
 				self.aSource.append(AlamofireSource(urlString:s)!)
 			}
-
-			self.slideshow.backgroundColor = UIColor.white
+			self.slideshow.backgroundColor = UIColor.lightGray
 			self.slideshow.slideshowInterval = 5.0
 			self.slideshow.pageControlPosition = PageControlPosition.underScrollView
+			// next 2 lines...
 			self.slideshow.pageControl.currentPageIndicatorTintColor = UIColor.lightGray
 			self.slideshow.pageControl.pageIndicatorTintColor = UIColor.black
 			self.slideshow.contentScaleMode = UIViewContentMode.scaleAspectFill
@@ -39,9 +40,8 @@ class ViewController: UIViewController {
 //				print("current page:", page)
 //			}
 
-			// try out other sources such as `afNetworkingSource`, `alamofireSource` or `sdWebImageSource` or `kingfisherSource`
 			self.slideshow.setImageInputs(self.aSource)
-
+			
 			let recognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.didTap))
 			self.slideshow.addGestureRecognizer(recognizer)
 		})
