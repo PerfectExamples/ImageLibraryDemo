@@ -97,8 +97,7 @@ fastlane/report.xml
 fastlane/screenshots
 
 Packages/
-Perfect-App-Template.xcodeproj
-*.xcodeproj
+ImageLibrary.xcodeproj
 buildlinux
 Package.swift.orig
 .packages_lin
@@ -120,3 +119,5 @@ npm-debug.log
 ReactClient/.eslintrc
 ReactClient/.gitignore
 ReactClient/.npmignore
+StORMlog.txt
+webLog.log
