@@ -39,66 +39,54 @@
     </a>
 </p>
 
-## Perfect App Template Starter Project
+## Perfect Image Library Demo Project
 
-This repository holds a template which can be cloned to serve as a starter for new work. It builds with Swift Package Manager and produces a stand-alone HTTP executable.
+This example demonsrates the use of a simple API backend to deliver an image gallery listing to a ReactJS web front end, as well as an iOS application.
 
-[https://www.npmjs.com/package/react-image-gallery](https://www.npmjs.com/package/react-image-gallery)
+The ReactJS application is served directly from the executable on port 8181, and the iOS application is meant to be running in the simulator as it is also set to use http://localhost:8181 as the host address for the API.
 
-The concept behind this template is to provide a structure for a larger project to grow into. It contains an HTTP Server config that loads from pre-separated Filters and Routes, a JSON config loader, and directories into which you can organize your handlers, objects and utility functions.
+The iOS application uses [ImageSlideshow](https://github.com/zvonicek/ImageSlideshow) as it's slideshow mechanism, and the app itself is based on the dexample from that project.
+
+The Web frontend in ReactJS is built using [https://www.npmjs.com/package/react-image-gallery](https://www.npmjs.com/package/react-image-gallery).
+
+Both these applications are using the same API endpoint: [http://localhost:8181/api/v1/image](http://localhost:8181/api/v1/image)
+
 
 ## Compatibility with Swift
 
-The master branch of this project currently compiles with **Xcode 8.2** or the **Swift 3.0.2** toolchain on Ubuntu.
+The master branch of this project currently compiles with **Xcode 8.3.2** or the **Swift 3.1** toolchain.
 
 ## Building & Running
 
 The following will clone and build an empty starter project and launch the server on port 8181.
 
 ```
-git clone https://github.com/PerfectlySoft/PerfectAppTemplate.git
-cd PerfectAppTemplate
+git clone https://github.com/PerfectExamples/ImageLibraryDemo.git
+cd ImageLibraryDemo/ServerSide
 swift build
-.build/debug/Perfect-App-Template
+.build/debug/ImageLibrary
 ```
 
 You should see the following output:
 
 ```
+[INFO] Running setup: imagefile
 [INFO] Starting HTTP server localhost on 0.0.0.0:8181
 ```
 
 This means the server is running and waiting for connections. Access [http://localhost:8181/](http://localhost:8181/) to see the greeting. Hit control-c to terminate the server.
 
-## Starter Content
+## Running the Web App
 
-The template contains the following directories:
+With the server running as above, all that needs to happen to launch the web app is to visit [http://localhost:8181](http://localhost:8181) in a browser.
 
-#### config
+The source for this is in the /ReactClient directory of the project and is a relatively standard ReactJS project.
 
-The config directory contains 2wo files `ApplicationConfiguration.json` and `ApplicationConfigurationLinux.json`. Add configuration options to these files and add them to be read and assigned in the `config()` function in `config/Config.swift`
+## Running the iOS App
 
-#### webroot
+The iOS app is located in the /iOSApp directory of the project. From the Terminal app, run `pod install` within that directory to install the required [CocoaPods](http://cocoapods.org/). Then you should be able to launch the `ImageSlideshow.xcworkspace` file, and build & run as normal in a simulator.  
 
-This is for static files and Mustache template files.
 
-### Source 
-
-#### Perfect-App-Template / configuration
-
-The files in this directory are meant to drive configuration of your application. Add configuration options, filters, and routes here.
-
-#### Perfect-App-Template / handlers
-
-The files in this directory are handler functions for JSON and Web routes.
-
-#### Perfect-App-Template / objects
-
-This directory is intended as the location for where you place your object classes and structs. Tere is also an `initializeObjects.swift` file for invoking setup functions in one convenient place.
-
-#### Perfect-App-Template / utility
-
-Place utility and helper functions here.
 
 
 
