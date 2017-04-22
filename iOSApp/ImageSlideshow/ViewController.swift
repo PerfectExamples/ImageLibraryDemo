@@ -23,19 +23,22 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+		self.slideshow.backgroundColor = UIColor.lightGray
+		self.slideshow.slideshowInterval = 5.0
+		self.slideshow.pageControlPosition = PageControlPosition.underScrollView
+		// next 2 lines...
+		self.slideshow.pageControl.currentPageIndicatorTintColor = UIColor.lightGray
+		self.slideshow.pageControl.pageIndicatorTintColor = UIColor.black
+		self.slideshow.contentScaleMode = UIViewContentMode.scaleAspectFill
+
+
 		images({
 			imgs in
 
 			for s in imgs {
 				self.aSource.append(AlamofireSource(urlString:s)!)
 			}
-			self.slideshow.backgroundColor = UIColor.lightGray
-			self.slideshow.slideshowInterval = 5.0
-			self.slideshow.pageControlPosition = PageControlPosition.underScrollView
-			// next 2 lines...
-			self.slideshow.pageControl.currentPageIndicatorTintColor = UIColor.lightGray
-			self.slideshow.pageControl.pageIndicatorTintColor = UIColor.black
-			self.slideshow.contentScaleMode = UIViewContentMode.scaleAspectFill
 //			self.slideshow.currentPageChanged = { page in
 //				print("current page:", page)
 //			}
