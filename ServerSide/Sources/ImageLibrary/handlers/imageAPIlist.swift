@@ -19,7 +19,7 @@ extension Handlers {
 			let imgs = ImageFile()
 			do {
 				try imgs.findAll()
-				_ = try? response.setBody(json: ["images": Handlers.nestedDataDict(imgs.rows())])
+				_ = try response.setBody(json: ["images": Handlers.nestedDataDict(imgs.rows())])
 			} catch {
 				Handlers.error(request, response, error: "\(error)", code: .badRequest)
 			}
