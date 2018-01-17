@@ -55,7 +55,7 @@ iOS 程序使用了一个控件 [ImageSlideshow](https://github.com/zvonicek/Ima
 
 ## Swift 兼容性
 
-目前本项目采用 **Xcode 8.2** 或 **Swift 4.0.3** 工具链
+目前本项目采用 **Xcode 9.2** 或 **Swift 4.0.3** 工具链
 
 ## 编译运行
 

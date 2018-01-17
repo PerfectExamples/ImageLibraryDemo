@@ -54,7 +54,7 @@ Both these applications are using the same API endpoint: [http://localhost:8181/
 
 ## Compatibility with Swift
 
-The master branch of this project currently compiles with **Xcode 8.2** or the **Swift 4.0.3** toolchain.
+The master branch of this project currently compiles with **Xcode 9.2** or the **Swift 4.0.3** toolchain.
 
 ## Building & Running
 
