@@ -1,4 +1,4 @@
-# Perfect Image Library Demo
+# Perfect Image Library Demo [简体中文](README.zh_CN.md)
 
 <p align="center">
     <a href="http://perfect.org/get-involved.html" target="_blank">
@@ -23,7 +23,7 @@
 
 <p align="center">
     <a href="https://developer.apple.com/swift/" target="_blank">
-        <img src="https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat" alt="Swift 3.0">
+        <img src="https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat" alt="Swift 4.0">
     </a>
     <a href="https://developer.apple.com/swift/" target="_blank">
         <img src="https://img.shields.io/badge/Platforms-OS%20X%20%7C%20Linux%20-lightgray.svg?style=flat" alt="Platforms OS X | Linux">
@@ -41,11 +41,11 @@
 
 ## Perfect Image Library Demo Project
 
-This example demonsrates the use of a simple API backend to deliver an image gallery listing to a ReactJS web front end, as well as an iOS application.
+This example demonstrates the use of a simple API backend to deliver an image gallery listing to a ReactJS web front end, as well as an iOS application.
 
 The ReactJS application is served directly from the executable on port 8181, and the iOS application is meant to be running in the simulator as it is also set to use http://localhost:8181 as the host address for the API.
 
-The iOS application uses [ImageSlideshow](https://github.com/zvonicek/ImageSlideshow) as it's slideshow mechanism, and the app itself is based on the dexample from that project.
+The iOS application uses [ImageSlideshow](https://github.com/zvonicek/ImageSlideshow) as it's slideshow mechanism, and the app itself is based on the example from that project.
 
 The Web frontend in ReactJS is built using [https://www.npmjs.com/package/react-image-gallery](https://www.npmjs.com/package/react-image-gallery).
 
@@ -54,7 +54,7 @@ Both these applications are using the same API endpoint: [http://localhost:8181/
 
 ## Compatibility with Swift
 
-The master branch of this project currently compiles with **Xcode 8.3.2** or the **Swift 3.1** toolchain.
+The master branch of this project currently compiles with **Xcode 8.2** or the **Swift 4.0.3** toolchain.
 
 ## Building & Running
 

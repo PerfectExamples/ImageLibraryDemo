@@ -1,6 +1,8 @@
 # OS X
 .DS_Store
-
+ServerSide/.build*
+ServerSide/Package.pins
+ServerSide/Package.resolved
 # Xcode
 build/
 *.pbxuser
